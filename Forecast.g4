@@ -4,7 +4,7 @@ grammar Forecast;
 // -------------------
 // Parser rules
 // -------------------
-statement: FORECAST pollutant AT location IN number HOURS IF condition;
+statement: FORECAST pollutant AT location IN NUMBER HOURS IF condition;
 
 pollutant: PM25 | PM10;
 
@@ -12,7 +12,7 @@ location: ID;
 
 condition: expr (AND expr)*;
 
-expr: metric comparator number;
+expr: metric comparator NUMBER;
 
 metric: WIND | HUMIDITY | TEMPERATURE;
 
