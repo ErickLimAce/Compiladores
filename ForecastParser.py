@@ -132,6 +132,12 @@ class ForecastParser ( Parser ):
             if hasattr( listener, "exitStatement" ):
                 listener.exitStatement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStatement" ):
+                return visitor.visitStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -192,6 +198,12 @@ class ForecastParser ( Parser ):
             if hasattr( listener, "exitPollutant" ):
                 listener.exitPollutant(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPollutant" ):
+                return visitor.visitPollutant(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -238,6 +250,12 @@ class ForecastParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLocation" ):
                 listener.exitLocation(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLocation" ):
+                return visitor.visitLocation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -289,6 +307,12 @@ class ForecastParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCondition" ):
                 listener.exitCondition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCondition" ):
+                return visitor.visitCondition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -352,6 +376,12 @@ class ForecastParser ( Parser ):
             if hasattr( listener, "exitExpr" ):
                 listener.exitExpr(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpr" ):
+                return visitor.visitExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -402,6 +432,12 @@ class ForecastParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMetric" ):
                 listener.exitMetric(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMetric" ):
+                return visitor.visitMetric(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -461,6 +497,12 @@ class ForecastParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitComparator" ):
                 listener.exitComparator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitComparator" ):
+                return visitor.visitComparator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
