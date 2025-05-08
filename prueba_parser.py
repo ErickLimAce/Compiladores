@@ -6,7 +6,7 @@ from parse_to_json import parse_forecast
 
 def main():
     if len(sys.argv) < 2:
-        print("Uso: python test.py 'TEXTO_DEL_FORECAST'")
+        print("Uso: python test.py 'FORECAST PM10 AT zona_norte IN 15 HOURS IF WIND > 10 AND HUMIDITY < 40'")
         sys.exit(1)
 
     input_text = sys.argv[1]
