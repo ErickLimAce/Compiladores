@@ -1,0 +1,18 @@
+{
+  "type": "ForecastStatement",
+  "pollutant": "PM10",
+  "location": "zona_norte",
+  "duration_hours": 15,
+  "conditions": [
+    {
+      "metric": "WIND",
+      "comparator": ">",
+      "value": 20
+    },
+    {
+      "metric": "HUMIDITY",
+      "comparator": "<",
+      "value": 40
+    }
+  ]
+}
