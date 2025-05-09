@@ -5,6 +5,10 @@ import json
 from parse_to_json import parse_forecast
 
 def main():
+    input_text = "FORECAST PM12 AT zona_norte IN 15 HOURS IF SUN > 10 AND HUMIDITY < 40"
+    result = parse_forecast(input_text)
+    print(json.dumps(result, indent=2))
+    
     if len(sys.argv) < 2:
         print("Uso: python test.py 'TEXTO_DEL_FORECAST'")
         sys.exit(1)
