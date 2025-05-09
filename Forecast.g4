@@ -6,7 +6,7 @@ grammar Forecast;
 // -------------------
 statement: FORECAST pollutant AT location IN NUMBER HOURS IF condition;
 
-pollutant: PM25 | PM10;
+pollutant: PM25 | PM10 | O3 | CO | NO | NO2 | NOX | SO2;
 
 location: ID;
 
@@ -14,7 +14,7 @@ condition: expr (AND expr)*;
 
 expr: metric comparator NUMBER;
 
-metric: WIND | HUMIDITY | TEMPERATURE;
+metric: TEMPERATURE | RAIN | PRESSURE | HUMIDITY | SOLAR_RADIATION | WIND;
 
 comparator: GT | LT | GE | LE | EQ;
 
@@ -29,12 +29,20 @@ IF: 'IF';
 HOURS: 'HOURS';
 AND: 'AND';
 
-PM25: 'PM25';
 PM10: 'PM10';
+O3: 'O3';
+CO: 'CO';
+NO: 'NO';
+NO2: 'NO2';
+NOX: 'NOx';
+SO2: 'SO2';
 
-WIND: 'WIND';
-HUMIDITY: 'HUMIDITY';
 TEMPERATURE: 'TEMPERATURE';
+RAIN: 'RAIN';
+PRESSURE: 'PRESSURE';
+HUMIDITY: 'HUMIDITY';
+SOLAR_RADIATION: 'SOLAR_RADIATION';
+WIND: 'WIND';
 
 GT: '>';
 LT: '<';
