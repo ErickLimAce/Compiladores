@@ -1,4 +1,5 @@
 # Generated from Forecast.g4 by ANTLR 4.13.1
+#convertir el texto de entrada en tokens
 from antlr4 import *
 from io import StringIO
 import sys

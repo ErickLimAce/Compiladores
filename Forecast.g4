@@ -1,8 +1,11 @@
 // Archivo: Forecast.g4
+//Define la gramática formal lenguaje.
+//Especifica reglas léxicas (tokens) y sintácticas (parser rules) 
+
 grammar Forecast;
 
 // -------------------
-// Parser rules
+// Parser rules.Define la estructura de un comando completo en tu lenguaje.
 // -------------------
 statement: FORECAST pollutant AT location IN NUMBER HOURS IF condition;
 
@@ -19,7 +22,7 @@ metric: WIND | HUMIDITY | TEMPERATURE;
 comparator: GT | LT | GE | LE | EQ;
 
 // -------------------
-// Lexer rules
+// Lexer rules Tokenizacion
 // -------------------
 
 FORECAST: 'FORECAST';

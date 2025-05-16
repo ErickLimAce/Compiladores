@@ -1,3 +1,6 @@
+#Se corre en main.py
+#Árbol de Sintaxis Abstracta (AST).
+#flujo final compilador
 import numpy as np
 
 def weather_forecast(tree):
@@ -23,6 +26,6 @@ def weather_forecast(tree):
     """
 
     forecast = np.random.randint(0, 100)
-
+    # Simulate a forecast value for the pollutant
     forecast_text = f"""The forecast for {str(tree["pollutant"])} in zona_norte in 2 hours is {forecast} micrograms per cubic meter."""
     return forecast_text

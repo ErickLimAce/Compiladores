@@ -1,4 +1,6 @@
 # parse_to_json.py
+#ransformar texto de entrada a una estructura de datos JSON.
+# encapsula todo el proceso de análisis léxico, sintáctico y construcción del AST. Y se usa en prueba_parser.py
 
 from antlr4 import InputStream, CommonTokenStream
 from ForecastLexer import ForecastLexer

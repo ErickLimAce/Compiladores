@@ -1,4 +1,5 @@
 # Generated from Forecast.g4 by ANTLR 4.13.1
+# Nousado instead ast-builder.py
 from antlr4 import *
 if "." in __name__:
     from .ForecastParser import ForecastParser
