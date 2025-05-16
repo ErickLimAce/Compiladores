@@ -9,7 +9,7 @@
 #4.1El visitor recorre el árbol, transformándolo en una estructura de datos jerárquica (diccionarios y listas)
 #5El resultado es un AST que representa de manera más abstracta el significado del comando
 # Mandar a parse_jason
-
+#Visita el árbol y lo convierte en una estructura abstracta y útil
 from ForecastVisitor import ForecastVisitor
 from ForecastParser import ForecastParser
 
